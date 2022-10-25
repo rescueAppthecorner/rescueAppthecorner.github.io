@@ -4,8 +4,11 @@
 
     }
 
+html { background-color: blueviolet;
+}
 
-body{
-    background-color: blueviolet;
+body {
+    margin: 8px;
+    background-color: white;
 }
 
