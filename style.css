@@ -2,7 +2,10 @@ body {
   font-size: 16px;
   color: #ffffff;
   background: #C13237;
-  margin: 80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
   font-family: 'Raleway', arial, sans-serif;
 }
 
