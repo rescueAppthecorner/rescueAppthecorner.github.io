@@ -6,8 +6,6 @@
 
 body{
     background: #649173;  /* fallback for old browsers */
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-right: 300px;
     margin-left: 300px;
     background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  /* Chrome 10-25, Safari 5.1-6 */
