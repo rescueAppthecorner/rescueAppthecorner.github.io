@@ -5,10 +5,11 @@
     }
 
 html{
-    background: white;
+    background-color: white;
 }
 
 body{
+   
     background: #649173;  /* fallback for old browsers */
     margin-right: 300px;
     margin-left: 300px;
