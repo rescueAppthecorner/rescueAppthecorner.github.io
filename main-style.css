@@ -4,11 +4,11 @@
 
     }
 
-html{
+body{
     background: white;
 }
 
-body{
+.main{
     background: #649173;  /* fallback for old browsers */
     margin-right: 300px;
     margin-left: 300px;
