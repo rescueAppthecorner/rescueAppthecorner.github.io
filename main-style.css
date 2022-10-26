@@ -4,6 +4,10 @@
 
     }
 
+html{
+    background-color: white;
+}
+
 body{
     background: #649173;  /* fallback for old browsers */
     margin-right: 300px;
