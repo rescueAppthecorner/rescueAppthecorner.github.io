@@ -12,7 +12,7 @@
     uiBind: function() {
       return $(document).on('click', '#mainnav', function(e) {
         e.preventDefault();
-        return $(this).find('_self').toggleClass('animate').toggleClass('invisible');
+        return $(this).find('li:not(:last-child)').toggleClass('animate').toggleClass('invisible');
       });
     }
   };
