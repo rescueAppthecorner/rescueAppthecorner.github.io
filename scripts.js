@@ -11,7 +11,7 @@
     },
     uiBind: function() {
       return $(document).on('click', '#mainnav', function(e) {
-        e.preventDefault();
+        //e.preventDefault();
         return $(this).find('li:not(:last-child)').toggleClass('animate').toggleClass('invisible');
       });
     }
