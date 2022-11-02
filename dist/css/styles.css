@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 34, 38, 42;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -235,11 +235,11 @@ sup {
 }
 
 a {
-  color: #0d6efd;
+  color: #404853;
   text-decoration: underline;
 }
 a:hover {
-  color: #0a58ca;
+  color: #404853;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -1621,7 +1621,7 @@ progress {
   }
 
   .col-xl-10 {
-    flex: 0 0 auto;
+    flex: 0 0 auto;   
     width: 83.33333333%;
   }
 
@@ -3046,13 +3046,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #212529;
+  border-color: #212529;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  background-color: #636669;;
+  border-color: #212529;;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;

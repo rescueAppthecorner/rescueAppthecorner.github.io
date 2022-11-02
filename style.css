@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   color: #ffffff;
-  background: #C13237;
+  background:#212529;
   font-family: 'Raleway', arial, sans-serif;
 }
 
@@ -67,7 +67,7 @@ h1 {
   border-radius: 50%;
 }
 #mainnav span {
-  color: #C13237;
+  color: #212529;
   padding: .35em;
   margin-left: .5em;
   border-radius: .2em;

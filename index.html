@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main-style.css">
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="dist/css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <title>RescueApp</title>
-
-</head>
-<body>
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-        <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"></ul>
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h1>RescueApp</h1></a>
-                    <hr class="dropdown-divider"/>
-                    <a class="dropdown-item" href="#!">Perfil</a><br>
-                    <a class="dropdown-item" href="#!">Notificaciones</a><br>
-                    <a class="dropdown-item" href="#!">Archivos</a><br>
-                    <a class="dropdown-item" href="#!">Historias compartidas</a><br>
-                    <hr class="dropdown-divider" />
-                    <a class="dropdown-item" href="#!">Sobre nosotros</a>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div id="main">
-    <h1 class="title">RescueApp</h1>
-    <div tag ="menu-desplegable">
-        <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/login.html">login</a></li>
-            <li><a href="/desplegable.html">Notificaciones/desplegable</a></li>
-            <li><a href="/dist/index.html">Main nueva</a></li>
-            <li><a href="/perfil.html">Perfik</a></li>
-        </ul>
-    </div>
-    <section tag ="principal">
-        <h2>Rescue app, para ti</h2>
-        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat omnis, ducimus soluta ea voluptatum adipisci voluptas nesciunt accusamus animi fugit dignissimos assumenda explicabo quae magni qui maiores, ipsa laboriosam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis labore beatae blanditiis officiis. Quam ea qui, delectus corporis aperiam suscipit illo tempora. Eaque minus totam porro vero repudiandae magnam odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate rerum blanditiis mollitia nisi provident quia consequuntur corporis amet, autem fugiat dicta, non, sunt iusto eligendi nulla libero ullam eveniet! Et!</p>
-
-    </section>
-    <footer>
-        
-        Rescue app ® Todos los derechos reservados
-
-    </footer>
-    </div>
-    
-</body>
-<script type="text/javascript" src="scripts.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Entrada</title>
+        <link href="/dist/css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                                <label for="inputEmail">Dirección de Email</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputPassword" type="password" placeholder="Comtraseña" />
+                                                <label for="inputPassword">Comtraseña</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="/dist/perfil.html">Olvido su Contraseña?</a>
+                                                <a class="btn btn-primary" href="/dist/index.html">Entrar</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="/dist/aboutUs.html">Necesita una cuenta?</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; RescueAPP 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/dist/js/scripts.js"></script>
+    </body>
 </html>
