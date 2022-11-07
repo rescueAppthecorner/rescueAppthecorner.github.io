@@ -1,4 +1,4 @@
-package com.curso.testapp1.cursos;
+package backend;
 
 import java.util.List;
 import java.util.Optional;

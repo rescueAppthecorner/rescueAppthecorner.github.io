@@ -1,4 +1,4 @@
-package com.curso.testapp1.cursos;
+package backend;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
