@@ -26,24 +26,17 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 function login(){
-    conectBack("get"); 
+    conectBack("get", "http://localhost:8080/dist"); 
     json = promise.then(response => response.json());
-    json.then(data => {
-      console.log(data)
-      for (let i = 0; i < data.length; i++) {
-        addCourseHTML(data[i].id, data[i].name, data[i].duration, data[i].description, "cursos");
-    }});
+    json.then(data => {console.log(data)});
 }
 
-function conectBack(accion){
-    const uri = "http://localhost:8080/dist";
+function conectBack(accion, uri){
       const promise = fetch(uri, {
         method: accion,
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         credentials: "omit", // include, *same-origin, omit
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: {"Content-Type": "application/json",},
       });
 }
