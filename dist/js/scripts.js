@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function login(){
+async function login(){
     conectBack("get", "http://localhost:8080/dist"); 
     json = promise.then(response => response.json());
     json.then(data => {console.log(data)});
