@@ -26,9 +26,10 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 async function login(){
-    conectBack("get", "http://localhost:8080/dist"); 
-    json = promise.then(response => response.json());
-    json.then(data => {console.log(data)});
+    in_email = document.getElementById("inputEmail").value;
+    in_pass = document.getElementById("inputPassword").value;
+
+    conectBack("get", `http://localhost:8080/login/${in_email}/${in_pass}`); 
 }
 
 function conectBack(accion, uri){
