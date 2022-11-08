@@ -25,7 +25,7 @@ public class RescueController {
 		return cs.findAll();
 	}
 
-	@GetMapping(value = "http://localhost:8080/login/{in_email}/{in_pass}")
+	@GetMapping(value = "/login/{in_email}/{in_pass}")
 	RescueProfile getCourseById(@PathVariable int id_email, int in_pass){
 		Optional<RescueProfile> c = cs.findById(id_email);
 		if (!c.isPresent())

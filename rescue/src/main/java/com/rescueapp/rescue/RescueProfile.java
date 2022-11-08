@@ -12,6 +12,7 @@ public class RescueProfile {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     
+    String passw; 
     String name;
     String surname1;
     String surname2;
@@ -22,7 +23,8 @@ public class RescueProfile {
 
     public RescueProfile() {}
     
-    public RescueProfile(String name, String surname1, String surname2, String email, String numTel) {
+    public RescueProfile(String passw, String name, String surname1, String surname2, String email, String numTel) {
+        this.passw = passw;
         this.name = name;
         this.surname1 = surname1;
         this.surname2 = surname2;
@@ -33,8 +35,13 @@ public class RescueProfile {
 
     //Setters
 
+
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setPassw(String passw) {
+        this.passw = passw;
     }
         
     public void setName(String name) {
@@ -57,7 +64,11 @@ public class RescueProfile {
     }
 
     //Getters
-    
+
+    public String getPassw() {
+        return passw;
+    }
+
     public int getId() {
         return id;
     }
