@@ -1,12 +1,14 @@
-package backend;
 
-import javax.annotation.processing.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 //POJO = Plain Old Java Object
 public class Course {
     @Id
-    @Generated(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     
     String name;
