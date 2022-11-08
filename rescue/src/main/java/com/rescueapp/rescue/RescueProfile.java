@@ -1,3 +1,4 @@
+package com.rescueapp.rescue;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

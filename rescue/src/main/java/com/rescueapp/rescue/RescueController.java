@@ -1,4 +1,4 @@
-
+package com.rescueapp.rescue;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,19 +15,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @CrossOrigin
 
-public class CourseController {
+public class RescueController {
     
     @Autowired
-    CourseRepository cs;	
+    RescueRepository cs;	
 
 	@GetMapping(value = "/cursos/thecorner") // URN = /curso/sistemas
-	List<Course>getCursos() {
+	List<RescueProfile>getCursos() {
 		return cs.findAll();
 	}
 
-	@GetMapping(value = "/cursos/thecorner/{id_search}")
-	Course getCourseById(@PathVariable int id_search){
-		Optional<Course> c = cs.findById(id_search);
+	@GetMapping(value = "http://localhost:8080/login/{in_email}/{in_pass}")
+	RescueProfile getCourseById(@PathVariable int id_email, int in_pass){
+		Optional<RescueProfile> c = cs.findById(id_email);
 		if (!c.isPresent())
 			return null;
 		return c.get();
@@ -40,7 +40,7 @@ public class CourseController {
 	}
 
 	@PostMapping(value = "/cursos/thecorner") // URN = /curso/sistemas
-	void insertCurso(@RequestBody Course curso) {
+	void insertCurso(@RequestBody RescueProfile curso) {
 		cs.saveAndFlush(curso);
 		return;
 	}
