@@ -6,21 +6,26 @@ import javax.persistence.Id;
 
 @Entity
 //POJO = Plain Old Java Object
-public class Course {
+public class RescueProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     
     String name;
-    int duration;
-    String description;
+    String surname1;
+    String surname2;
+    String email;
+    String numTel;
 
-    public Course() {}
+    public RescueProfile() {}
     
-    public Course(String name, int duration, String description) {
+    public RescueProfile(String name, String surname1, String surname2, String email, String numTel) {
         this.name = name;
-        this.duration = duration;
-        this.description = description;
+        this.surname1 = surname1;
+        this.surname2 = surname2;
+        this.email = email;
+        this.numTel = numTel;
+        
     }
 
     public int getId() {
@@ -37,17 +42,6 @@ public class Course {
     public void setName(String name) {
         this.name = name;
     }
-    public int getDuration() {
-        return duration;
-    }
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    
     
 }
