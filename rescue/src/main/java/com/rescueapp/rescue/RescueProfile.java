@@ -61,7 +61,7 @@ public class RescueProfile {
     public int getId() {
         return id;
     }
-public String getName() {
+    public String getName() {
         return name;
     }
     public String getSurname1() {
