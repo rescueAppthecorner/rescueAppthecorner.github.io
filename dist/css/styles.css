@@ -87,7 +87,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-image: url("../css/fondo3.jpg");
 }
 
 hr {
@@ -10682,6 +10681,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("../css/fondo3.jpg");
 }
 #layoutAuthentication #layoutAuthentication_content {
   min-width: 0;
