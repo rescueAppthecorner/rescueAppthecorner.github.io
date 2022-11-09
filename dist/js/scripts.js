@@ -34,12 +34,14 @@ async function login(){
 }
 
 function conectBack(accion, uri, datos){
-      const promise = fetch(uri, {
-        method: accion,
-        mode: "cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "omit", // include, *same-origin, omit
-        headers: {"Content-Type": "application/json",}, 
-        body: JSON.stringify(datos)
-      });
+    const promise = fetch(uri, {
+      method: accion,
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "omit", // include, *same-origin, omit
+      headers: {"Content-Type": "application/json",}, 
+      body: JSON.stringify(datos)
+    });
+
+    console.log(promise);
 }
