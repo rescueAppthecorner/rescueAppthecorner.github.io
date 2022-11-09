@@ -22,22 +22,24 @@ window.addEventListener('DOMContentLoaded', event => {
             localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
         });
     }
-
 });
 
 async function login(){
     in_email = document.getElementById("inputEmail").value;
     in_pass = document.getElementById("inputPassword").value;
 
-    conectBack("get", `http://localhost:8080/login/${in_email}${in_pass}`); 
+    profile = {email: in_email, pass: in_pass};
+
+    conectBack("post", `http://localhost:8080/login`, profile); 
 }
 
-function conectBack(accion, uri){
+function conectBack(accion, uri, datos){
       const promise = fetch(uri, {
         method: accion,
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         credentials: "omit", // include, *same-origin, omit
-        headers: {"Content-Type": "application/json",},
+        headers: {"Content-Type": "application/json",}, 
+        body: JSON.stringify(datos)
       });
 }

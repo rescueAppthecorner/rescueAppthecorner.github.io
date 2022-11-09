@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RescueRepository extends JpaRepository <RescueProfile, Integer> {
 
-    List<RescueProfile> findByName(String name);
+    List<RescueProfile> findByEmail(String email);
     
 }

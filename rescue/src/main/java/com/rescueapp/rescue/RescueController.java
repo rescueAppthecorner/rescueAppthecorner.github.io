@@ -26,8 +26,8 @@ public class RescueController {
 	}
 
 	@GetMapping(value = "/login/{in_email}{in_pass}")
-	RescueProfile getCourseById(@PathVariable int id_email, int in_pass){
-		Optional<RescueProfile> c = cs.findById(id_email);
+	RescueProfile getCourseById(@PathVariable int in_email, int in_pass){
+		List<RescueProfile> c = cs.findAll(in_email);
 		if (!c.isPresent())
 			return null;
 		return c.get();
@@ -39,7 +39,7 @@ public class RescueController {
 		return "El curso con Id: " + in_id + " se ha eliminado";
 	}
 
-	@PostMapping(value = "/cursos/thecorner") // URN = /curso/sistemas
+	@PostMapping(value = "/login") // URN = /curso/sistemas
 	void insertCurso(@RequestBody RescueProfile curso) {
 		cs.saveAndFlush(curso);
 		return;
