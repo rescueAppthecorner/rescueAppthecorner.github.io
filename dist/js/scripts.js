@@ -43,5 +43,13 @@ function conectBack(accion, uri, datos){
       body: JSON.stringify(datos)
     });
 
+    if(promise[Response]=="ok"){
+       console.log("entramos") 
+    }
+    else{
+        console.log("no entramos") 
+    }
+
+
     console.log(promise);
 }
