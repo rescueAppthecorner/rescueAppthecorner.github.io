@@ -47,13 +47,14 @@ function conectBack(accion, uri, datos){
     t.then((data) => {
         console.log("data=" + data)
         
-        if(data=="concedido"){
+        if(data!="concedido"){
             console.log("entramos") 
-            
+            document.location.href="principal.html"
         }
         else{
             console.log("no entramos") 
         }
+        
     })
 
 }
