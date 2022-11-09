@@ -31,14 +31,14 @@ public class RescueController {
 	}
 
 	@PostMapping(value = "/login") // URN = /curso/sistemas
-	Boolean loginProfile(@RequestBody RescueProfile datos) {
+	String loginProfile(@RequestBody RescueProfile datos) {
 		RescueProfile perfiles = cs.findByEmail(datos.email);
 			if (perfiles != null){
-				if(perfiles.passw != datos.passw){
-					return true;
+				if(perfiles.passw == datos.passw){
+					return "concedido";
 				}
 			}
-			return false;
+			return "denegado";
 		}
 	}
 

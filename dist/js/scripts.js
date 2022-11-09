@@ -42,14 +42,18 @@ function conectBack(accion, uri, datos){
       headers: {"Content-Type": "application/json",}, 
       body: JSON.stringify(datos)
     });
+    t=promise.then((r) => r.text());
 
-    if(promise[Response]=="ok"){
-       console.log("entramos") 
-    }
-    else{
-        console.log("no entramos") 
-    }
+    t.then((data) => {
+        console.log("data=" + data)
+        
+        if(data=="concedido"){
+            console.log("entramos") 
+            
+        }
+        else{
+            console.log("no entramos") 
+        }
+    })
 
-
-    console.log(promise);
 }
