@@ -49,7 +49,7 @@ function conectBack(accion, uri, datos){
         
         if(data!="concedido"){
             console.log("entramos") 
-            document.location.href="principal.html"
+            document.location.href="principal.html";
         }
         else{
             console.log("no entramos") 
