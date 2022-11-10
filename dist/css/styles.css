@@ -156,6 +156,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  margin-left: 30px;
 }
 
 .row {
@@ -7221,6 +7222,7 @@ textarea.form-control-lg {
 .text-muted {
   --bs-text-opacity: 1;
   color: #6c757d !important;
+  margin-left: 40px;
 }
 
 .text-black-50 {
