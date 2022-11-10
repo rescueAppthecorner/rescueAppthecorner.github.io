@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class RescueController {
     
     @Autowired
-    RescueRepository cs;	
+    RescueRepository cs;
+	RescueRepositoryU cu;	
+	
 
 	@GetMapping(value = "/cursos/thecorner") // URN = /curso/sistemas
 	List<RescueProfile>getCursos() {
@@ -32,8 +34,9 @@ public class RescueController {
 
 	//Chequeo de credenciales de usuario de login
 	@PostMapping(value = "/login") 
-	String loginProfile(@RequestBody RescueProfile datos) {
-		RescueProfile perfiles = cs.findByEmail(datos.email);
+	String loginProfile(@RequestBody RescueUsuario datos) {
+		System.out.println("datos.pass :"+  datos.passw);
+		RescueUsuario perfiles = cu.findByEmail(datos.email);
 			if (perfiles != null){
 				if(perfiles.passw == datos.passw){
 					return "concedido";
