@@ -1,6 +1,7 @@
 package com.rescueapp.rescue;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @CrossOrigin
@@ -19,6 +19,7 @@ public class RescueController {
     
     @Autowired
     RescueRepository cs;
+	@Autowired
 	RescueRepositoryU cu;	
 	
 
@@ -36,10 +37,14 @@ public class RescueController {
 	//Chequeo de credenciales de usuario de login
 	@PostMapping(value = "/login") 
 	String loginProfile(@RequestBody RescueUsuario datos) {
+		System.out.println("datos.pass :"+  datos.email);
 		System.out.println("datos.pass :"+  datos.passw);
+		System.out.println(cu.findByEmail(datos.email));
+
 		RescueUsuario perfiles = cu.findByEmail(datos.email);
 			if (perfiles != null){
-				if(perfiles.passw == datos.passw){
+				
+				if(perfiles.passw==datos.passw){
 					return "concedido";
 				}
 			}
