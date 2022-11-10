@@ -25,15 +25,19 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 async function login(){
-    in_email = document.getElementById("inputEmail").value;
-    in_pass = document.getElementById("inputPassword").value;
 
-    profile = {email: in_email, pass: in_pass};
+    profile = {
+        email: document.getElementById("inputEmail").value, 
+        passw: document.getElementById("inputPassword").value
+    };
+    
 
     conectBack("post", `http://localhost:8080/login`, profile); 
 }
 
 function conectBack(accion, uri, datos){
+    console.log(datos.email)
+    console.log(datos.passw)
     const promise = fetch(uri, {
       method: accion,
       mode: "cors", // no-cors, *cors, same-origin
@@ -47,11 +51,13 @@ function conectBack(accion, uri, datos){
     t.then((data) => {
         console.log("data=" + data)
         
-        if(data!="concedido"){
+        //Sentencia negada para pruebas
+        if(data=="concedido"){
             console.log("entramos") 
             document.location.href="dist/principal.html";
             return;
         }
+
         alert("El correo o la contraseña es incorrecto");
         
     })
