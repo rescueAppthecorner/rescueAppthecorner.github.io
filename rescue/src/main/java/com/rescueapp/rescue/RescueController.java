@@ -36,8 +36,11 @@ public class RescueController {
 	//Chequeo de credenciales de usuario de login
 	@PostMapping(value = "/login") 
 	String loginProfile(@RequestBody RescueUsuario datos) {
-		System.out.println("datos.pass :"+  datos.passw);
-		RescueUsuario perfiles = cu.findByEmail(datos.email);
+		System.out.println(datos.passw);
+		System.out.println(datos.email);
+		RescueUsuario perfiles = cu.findByEmail(datos.email.trim());
+		System.out.println(datos.email);
+
 			if (perfiles != null){
 				if(perfiles.passw == datos.passw){
 					return "concedido";
