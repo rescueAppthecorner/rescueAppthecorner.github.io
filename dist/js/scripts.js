@@ -59,7 +59,6 @@ function conectBack(accion, uri, datos){
         }
 
         alert("El correo o la contraseña es incorrecto");
-        
     })
 
 }
