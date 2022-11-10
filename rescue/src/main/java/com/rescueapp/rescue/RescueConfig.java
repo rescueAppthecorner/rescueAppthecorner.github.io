@@ -1,9 +1,14 @@
 package com.rescueapp.rescue;
 
+import java.lang.reflect.Array;
+import java.sql.Struct;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import antlr.collections.List;
 
 @Entity
 //POJO = Plain Old Java Object
@@ -13,15 +18,30 @@ public class RescueConfig {
     int idCampo;
 
     int idUsuario;
-    String nombreParam; 
-    String contenido;
+    String mOculto; 
+    String mascMOculto;
+    String numEmer;
+    String derivarURL;
+    <List> picVic = {
+        String picVic1;
+        String picVic2;
+        String picVic3;
+        String picVic4; 
+        String picVic5;
+    };
+    <List> picAgr = {
+        String picAgr1;
+        String picAgr2;
+        String picAgr3;
+        String picAgr4; 
+        String picAgr5;
+    };
+    }
 
     public RescueConfig() {}
     
-    public RescueConfig(int idUsuario, String nombreParam, String contenido) {
+    public RescueConfig(int idUsuario) {
         this.idUsuario = idUsuario;
-        this.nombreParam = nombreParam;
-        this.contenido = contenido;
         
     }
 
