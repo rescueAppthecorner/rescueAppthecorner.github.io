@@ -30,7 +30,8 @@ public class RescueController {
 		return "El curso con Id: " + in_id + " se ha eliminado";
 	}
 
-	@PostMapping(value = "/login") // URN = /curso/sistemas
+	//Chequeo de credenciales de usuario de login
+	@PostMapping(value = "/login") 
 	String loginProfile(@RequestBody RescueProfile datos) {
 		RescueProfile perfiles = cs.findByEmail(datos.email);
 			if (perfiles != null){
