@@ -50,7 +50,6 @@ public class RescueController {
 			if(perfiles.get(i).passw.equalsIgnoreCase(datos.passw)){
 				return "concedido";
 			}
-			
 		}
 			return "denegado";
 		}
