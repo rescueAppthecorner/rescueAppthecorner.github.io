@@ -1,7 +1,6 @@
 package com.rescueapp.rescue;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
