@@ -1,6 +1,7 @@
 package com.rescueapp.rescue;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,15 +39,19 @@ public class RescueController {
 	String loginProfile(@RequestBody RescueUsuario datos) {
 		System.out.println("datos.pass :"+  datos.email);
 		System.out.println("datos.pass :"+  datos.passw);
-		System.out.println(cu.findByEmail(datos.email));
+		
 
-		RescueUsuario perfiles = cu.findByEmail(datos.email);
-			if (perfiles != null){
-				
-				if(perfiles.passw==datos.passw){
-					return "concedido";
-				}
+		List<RescueUsuario> perfiles = cu.findAll();
+		//RescueUsuario perfiles = cu.findByEmail(datos.email.trim());
+		System.out.println(perfiles.size());
+		for (int i = 0; i < perfiles.size(); i++){
+			System.out.println(perfiles.get(i).email);
+			System.out.println(perfiles.get(i).passw);
+			if(perfiles.get(i).passw.equalsIgnoreCase(datos.passw)){
+				return "concedido";
 			}
+			
+		}
 			return "denegado";
 		}
 	}
