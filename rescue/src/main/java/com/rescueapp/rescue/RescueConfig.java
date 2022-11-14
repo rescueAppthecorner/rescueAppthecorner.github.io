@@ -1,5 +1,7 @@
 package com.rescueapp.rescue;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,13 +20,13 @@ public class RescueConfig {
     String mascMOculto;
     String numEmer;
     String derivarURL;
-    String[] picVic;
-    String[] picAgr;
+    List<String> picVic;
+    List<String> picAgr;
 
     
     public RescueConfig() {}
     
-    public RescueConfig(int idUsuario, String mOculto, String mascMOculto, String numEmer, String derivarURL, String[] picVic, String[] picAgr) {
+    public RescueConfig(int idUsuario, String mOculto, String mascMOculto, String numEmer, String derivarURL, List<String> picVic, List<String> picAgr) {
         this.idUsuario = idUsuario;
         this.mOculto = mOculto; 
         this.mascMOculto = mascMOculto;
@@ -57,11 +59,11 @@ public class RescueConfig {
         this.derivarURL = derivarURL;
     }
 
-    public void setPicVic(String[] picVic) {
+    public void setPicVic(List<String> picVic) {
         this.picVic = picVic;
     }
 
-    public void setPicAgr(String[] picAgr) {
+    public void setPicAgr(List<String> picAgr) {
         this.picAgr = picAgr;
     }
 
@@ -92,11 +94,11 @@ public class RescueConfig {
         return derivarURL;
     }
 
-    public String[] getPicVic() {
+    public List<String> getPicVic() {
         return picVic;
     }
 
-    public String[] getPicAgr() {
+    public List<String> getPicAgr() {
         return picAgr;
     }
 
