@@ -63,3 +63,45 @@ function conectBack(accion, uri, datos){
     })
 
 }
+async function principal(){
+
+    parameters = {
+        modooculto: document.getElementById("modooculto").value, 
+        mascara: document.getElementById("mascara").value,
+        numeroemergencia: document.getElementById("numeroemergencia").value,
+        fotosvictima: document.getElementById("fotosvictima").value,
+        fotosagresor: document.getElementById("fotosagresor").value,
+        paginaderviar: document.getElementById("paginaderviar").value,
+    };
+    
+
+    conectBack("post", `http://localhost:8080/principal`, parameters); 
+}
+
+function conectBack(accion, uri, datos){
+    console.log(datos.modooculto)
+    console.log(datos.mascara)
+    const promise = fetch(uri, {
+      method: accion,
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "omit", // include, *same-origin, omit
+      headers: {"Content-Type": "application/json",}, 
+      body: JSON.stringify(datos)
+    });
+    t=promise.then((r) => r.text());
+
+    t.then((data) => {
+        console.log("data=" + data)
+        
+        //Sentencia negada para pruebas
+        if(data=="concedido"){
+            console.log("entramos") 
+            //document.location.href="dist/principal.html";
+            return;
+        }
+
+        alert("se ha cometido un error");
+    })
+
+}
