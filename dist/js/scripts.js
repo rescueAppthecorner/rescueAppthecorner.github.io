@@ -36,33 +36,6 @@ async function login(){
     conectBack("post", `http://localhost:8080/login`, profile); 
 }
 
-function conectBack(accion, uri, datos){
-    console.log(datos.email)
-    console.log(datos.passw)
-    const promise = fetch(uri, {
-      method: accion,
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "omit", // include, *same-origin, omit
-      headers: {"Content-Type": "application/json",}, 
-      body: JSON.stringify(datos)
-    });
-    t=promise.then((r) => r.text());
-
-    t.then((data) => {
-        console.log("data=" + data)
-        
-        //Sentencia negada para pruebas
-        if(data=="concedido"){
-            console.log("entramos") 
-            document.location.href="dist/principal.html";
-            return;
-        }
-
-        alert("El correo o la contraseña es incorrecto");
-    })
-
-}
 async function principal(){
 
     parameters = {
@@ -97,11 +70,11 @@ function conectBack(accion, uri, datos){
         //Sentencia negada para pruebas
         if(data=="concedido"){
             console.log("entramos") 
-            //document.location.href="dist/principal.html";
+            document.location.href="dist/principal.html";
             return;
         }
 
-        alert("se ha cometido un error");
+        alert("El correo o la contraseña es incorrecto");
     })
 
 }
