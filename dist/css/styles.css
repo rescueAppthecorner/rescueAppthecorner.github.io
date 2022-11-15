@@ -153,7 +153,7 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-p {
+.contenido {
   margin-top: 0;
   margin-bottom: 1rem;
   margin-left: 30px;
@@ -161,7 +161,8 @@ p {
 
 .row {
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 1.2rem;
+  --bs-gutter-y: 0rem;
+  vertical-align: center;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(5 * var(--bs-gutter-y));
@@ -177,7 +178,6 @@ p {
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  padding-top: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -10726,6 +10726,7 @@ body {
   transform: translateX(-225px);
 }
 #layoutSidenav #layoutSidenav_content {
+  margin-top: 5%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10784,7 +10785,7 @@ body {
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
   padding-left: 225px;
-  top: 56px;
+  top: 5px;
 }
 
 #layoutError {
