@@ -20,6 +20,8 @@ public class RescueController {
     RescueRepository cs;
 	@Autowired
 	RescueRepositoryU cu;	
+	@Autowired
+	RescueRepositoryConfig cc;	
 	
 
 	@GetMapping(value = "/cursos/thecorner") // URN = /curso/sistemas
@@ -52,5 +54,24 @@ public class RescueController {
 		}
 			return "denegado";
 		}
-	}
+	
+	@PostMapping(value = "/principal") 
+	String principalParameters(@RequestBody RescueConfig datos) {
+		System.out.println("datos.pass :"+  datos.mOculto);
+		System.out.println("datos.pass :"+  datos.mascMOculto);
+		
 
+		//List<RescueUsuario> perfiles = cu.findAll();
+		RescueConfig parameters = cc.findByidCampo(datos.idCampo);
+//		System.out.println(parameters.size());
+//		for (int i = 0; i < parameters.size(); i++){
+			System.out.println(parameters.mOculto);
+			System.out.println(parameters.mascMOculto);
+			//if(parameters.get(i).passw.equalsIgnoreCase(datos.mascMOculto)){
+			//	return "concedido";
+			//}
+		//}
+			return "denegado";
+		//}
+	}
+}
